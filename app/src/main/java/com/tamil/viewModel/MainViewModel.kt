@@ -9,7 +9,10 @@ class MainViewModel : ViewModel() {
         Log.i("MainViewModel", "MainViewModel created!")
     }
 
-    var displayName: MutableLiveData<String> = MutableLiveData("")
+    var displayName = MutableLiveData<MutableList<String>>().apply {
+        value =
+            mutableListOf("Pandi", "Uma", "Tamil", "Viyan")
+    }
 
     override fun onCleared() {
         super.onCleared()
